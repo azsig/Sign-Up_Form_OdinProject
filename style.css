@@ -29,6 +29,7 @@ html, body{
     padding: 10rem 0;
     font-size: var(--textsize1);
     font-weight: 600;
+    width: 100%;
 }
 
 .text, #form, #confirm{
@@ -126,4 +127,28 @@ input:invalid:not(:focus):not(:placeholder-shown) {
     position: relative;
     margin: auto;
     top: 24rem;
+}
+
+@media (orientation: portrait){
+    #content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .content{
+        padding: 0;
+        font-size: 1.2rem;
+    }
+    .piclogo{
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+    }
+    #discl{
+        top: 0;
+        margin-bottom: 5px;
+    }
+    #input{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
 }
